@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/* navbar css  */
+nav{
+    display: flex;   
+    justify-content: space-around;
+    align-items: center;
+    min-height: 12vh; 
+    background-color: white;
+    position: fixed;
+    width: 100%;
+}
+.logo img{
+    height: 30px;
+    padding: 0 2rem;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    align-items: center;
+    margin-top: 15px;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-item a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.search{
+    margin-left: 8  0px;
+    width: 400px;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+    padding: 3px 15px;
+}
+.search-box{
+    width: 300px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+    padding: 5px 15px;
+}
+.burger{
+    display: none;
+}
+.burger div{
+    background-color: black;
+    width: 20px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width:1260px) {
+    nav{
+        display: block;
+    }
+    .logo img{
+        display: none;
+    }       
+    .nav-links{
+        position: absolute;
+        left: 0px;
+        height: 98vh;
+        background-color: rgb(226, 226, 226);
+        top: 12vh;
+        display: flex;
+       flex-direction: column;
+       width: 70%;
+       align-items: center;
+       transform: translateX(-200%);
+       transition: transform 0.5s ease-in;
+    }
+    .search{
+       display: none;
+    }
+    .nav-item a{
+        text-transform: none;
+        font-size: 20px;
+    }
+    .burger{
+        display: block;
+        padding-top: 2rem;
+        padding-left: 3rem;
+        cursor: pointer;
+    }
+    
+   
+}
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* css for padding below the navbar */
+.paddingbelowthenavbar{
+    padding-bottom: 5rem;
+}
+
+/* css for Biggest Deals On Top Brands */
+
+
+
+/* css for men's html footer */
+.footer{
+    background-color: rgb(240, 240, 240);
+    padding: 2rem 15rem;  
+}
+.footer ul{
+    padding: 0;
+    padding-top: 1rem;
+}
+.footer li{
+    list-style: none;
+    color: grey;
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+.footer a{
+    text-decoration: none;
+}
+.appdownload{
+    padding: 1rem 0;
+}
+.appdownload img{
+    width: 150px;
+}
+.socialicons{
+  padding: 0.5rem 0;
+}
+.socialicons i{
+    color: rgb(121, 121, 121);
+    font-size: 25px;
+    padding-right: 1rem;
+}
+.trustissue img{
+    width: 50px;
+}
+.trustissue span{
+    font-weight: 600;
+    color: black;
+}
+.trustissue p{
+    font-size: 14px;
+    color: rgb(78, 78, 78);
+}
+.popularsearchtext{
+    font-size: 17px;
+    font-weight: 500;
+}
+.popularsearchitems a{
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+    font-size: 14px;
+    padding-right: 1rem;
+    border-right: 1px solid rgb(78, 78, 78);
+}
+.contactlink{
+    margin-top: 2.5rem;
+    color: rgb(78, 78, 78);
+}
+.copyright{
+    float: right;
+    margin-top: -30px;
+    color: rgb(78, 78, 78);
+}
+@media screen and (max-width: 1224px) {
+    .footer{
+        display: none;
+    }
+    
+}
